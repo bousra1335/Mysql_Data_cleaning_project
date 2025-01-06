@@ -143,5 +143,22 @@ UPDATE layoffs_staging2
 SET industry = 'Travel'
 WHERE industry IS NULL;
 
+SELECT *
+FROM layoffs_staging2
+WHERE company LIKE 'Bally%';
+
+SELECT *
+FROM layoffs_staging2;
+
+DELETE
+FROM layoffs_staging2
+WHERE total_laid_off IS NULL
+AND percentage_laid_off IS NULL;
+
+ALTER TABLE layoffs_staging2
+DROP COLUMN row_num;
+
+
+
 
 
